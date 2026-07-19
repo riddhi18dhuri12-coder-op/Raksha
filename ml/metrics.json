@@ -1,0 +1,13 @@
+{
+  "dataset": "NSL-KDD (real, public benchmark)",
+  "train_records_normal_only": 67343,
+  "test_records_total": 22544,
+  "test_records_attacks": 12833,
+  "detection_rate": 0.6352,
+  "false_positive_rate": 0.0256,
+  "true_positives": 8152,
+  "false_negatives": 4681,
+  "false_positives": 249,
+  "true_negatives": 9462,
+  "trained_at": 1783962392.6618822
+}

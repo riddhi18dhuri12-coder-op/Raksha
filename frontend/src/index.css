@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
+
+:root {
+  /* 8-bit / 16-bit retro palette */
+  --bg-void: #0f0a1e;
+  --bg-panel: #1c1435;
+  --bg-panel-raised: #2a2050;
+  --border-hair: #05030a;
+
+  --text-primary: #e8e6ff;
+  --text-muted: #9d94c9;
+  --text-dim: #6a6099;
+
+  --signal-red: #ff3355;
+  --signal-red-dim: #4a1020;
+  --signal-amber: #ffcc33;
+  --signal-amber-dim: #4a3a10;
+  --signal-green: #33ff88;
+  --signal-green-dim: #103a26;
+  --signal-blue: #33ccff;
+  --signal-blue-dim: #103048;
+
+  --font-mono: 'VT323', 'IBM Plex Mono', monospace;
+  --font-body: 'VT323', 'IBM Plex Mono', monospace;
+  --font-pixel: 'Press Start 2P', 'VT323', monospace;
+
+  --pixel-border: 3px;
+  --pixel-shadow: 4px 4px 0 #000;
+}
+
+* {
+  box-sizing: border-box;
+  border-radius: 0 !important;
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: var(--bg-void);
+  background-image:
+    linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+  background-size: 8px 8px;
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: 1.35;
+  -webkit-font-smoothing: none;
+  image-rendering: pixelated;
+}
+
+::-webkit-scrollbar {
+  width: 14px;
+  height: 14px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-panel);
+  border-left: var(--pixel-border) solid #000;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--signal-blue);
+  border: var(--pixel-border) solid #000;
+}
+
+button {
+  font-family: var(--font-mono);
+  cursor: pointer;
+  image-rendering: pixelated;
+}
+
+button:focus-visible,
+input:focus-visible {
+  outline: 3px solid var(--signal-amber);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
